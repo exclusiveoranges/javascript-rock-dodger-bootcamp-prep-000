@@ -80,20 +80,27 @@ alert('YOU LOSE!')
 function moveDodger(e) {
 
   if (e.which === 37) {
+<<<<<<< HEAD
     e.preventDefault()
     e.stopPropagation()
+=======
+>>>>>>> e9e606821509cd373b2c699139e2645acf38e687
     moveDodgerLeft()
   }
 
   if (e.which === 39) {
+<<<<<<< HEAD
     e.preventDefault()
     e.stopPropagation()
+=======
+>>>>>>> e9e606821509cd373b2c699139e2645acf38e687
     moveDodgerRight()
   }
 
 }
 
 function moveDodgerLeft() {
+<<<<<<< HEAD
 
   window.requestAnimationFrame(function(){
     var leftNumbers = dodger.style.left.replace('px', '')
@@ -103,11 +110,24 @@ function moveDodgerLeft() {
       dodger.style.left = `${left - 4}px`
     }
   });
+=======
+  var leftNumbers = dodger.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
+
+  if (left > 0) {
+    dodger.style.left = `${left - 4}px`
+  }
+
+  window.requestAnimationFrame(moveDodgerLeft())
+
+
+>>>>>>> e9e606821509cd373b2c699139e2645acf38e687
 
 }
 
 function moveDodgerRight() {
 
+<<<<<<< HEAD
 
 
 window.requestAnimationFrame(function() {
@@ -121,6 +141,18 @@ window.requestAnimationFrame(function() {
 
 });
 };
+=======
+  var rightNumbers = dodger.style.right.replace('px', '')
+  var right = parseInt(rightNumbers, 10)
+
+  if (right > 0) {
+    dodger.style.left = `${left + 4}px`
+  }
+
+window.requestAnimationFrame(moveDodgerRight())
+
+}
+>>>>>>> e9e606821509cd373b2c699139e2645acf38e687
 
 /**
  * @param {string} p The position property
